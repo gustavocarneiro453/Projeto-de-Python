@@ -61,7 +61,7 @@ Você pode vizualizar a lista de receitas favoritas.
 Você pode desfavoritar uma receita já favorita, ela vai ser excluida da sua lista de favoritas.
 
 ## Integrantes do Grupo:
-Gustavo Carneiro 
-Maria Fernanda 
-Thiago Vinnícius 
-Sofia Tenório
+-Gustavo Carneiro 
+-Maria Fernanda 
+-Thiago Vinnícius 
+-Sofia Tenório
