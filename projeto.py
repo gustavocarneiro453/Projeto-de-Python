@@ -2,17 +2,19 @@ import os
 import random
 
 class Receita:
-    def __init__(self, nome, pais, ingredientes, preparo):
+    def __init__(self, nome, pais, ingredientes, preparo, nota):
         self.nome = nome
         self.pais = pais
         self.ingredientes = ingredientes
         self.preparo = preparo
+        self.nota = nota
 
     def __str__(self):
         return (f"Nome: {self.nome}\n"
                 f"País: {self.pais}\n"
                 f"Ingredientes: {self.ingredientes}\n"
-                f"Modo de Preparo: {self.preparo}\n")
+                f"Modo de Preparo: {self.preparo}\n"
+                f"Nota: {self.nota}\n")
 
 
 def clear_screen():
