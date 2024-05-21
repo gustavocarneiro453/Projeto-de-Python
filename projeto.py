@@ -30,7 +30,8 @@ def carregar_receitas():
                 pais = lines[i + 1].strip()
                 ingredientes = lines[i + 2].strip()
                 preparo = lines[i + 3].strip()
-                receita = Receita(nome, pais, ingredientes, preparo)
+                nota = lines[i+ 4].strip()
+                receita = Receita(nome, pais, ingredientes, preparo, nota)
                 lista_receitas.append(receita)
 
     except FileNotFoundError:
@@ -44,6 +45,7 @@ def salvar_receitas(lista_receitas, modo='a'):
             file.write(f"{receita.pais}\n")
             file.write(f"{receita.ingredientes}\n")
             file.write(f"{receita.preparo}\n")
+            file.write{f"{receita.nota}\n")
             file.write("\n")
 
 def salvar_receita_favorita(receita):
@@ -52,6 +54,7 @@ def salvar_receita_favorita(receita):
         file.write(f"{receita.pais}\n")
         file.write(f"{receita.ingredientes}\n")
         file.write(f"{receita.preparo}\n")
+        file.write{f"{receita.nota}\n")
         file.write("\n")
 
 def carregar_receitas_favoritas():
@@ -64,7 +67,8 @@ def carregar_receitas_favoritas():
                 pais = lines[i + 1].strip()
                 ingredientes = lines[i + 2].strip()
                 preparo = lines[i + 3].strip()
-                receita = Receita(nome, pais, ingredientes, preparo)
+                nota = lines[i + 4].strip()
+                receita = Receita(nome, pais, ingredientes, preparo, nota)
                 lista_favoritas.append(receita)
 
     except FileNotFoundError:
@@ -78,6 +82,7 @@ def salvar_receitas_favoritas(lista_favoritas, modo='w'):
             file.write(f"{receita.pais}\n")
             file.write(f"{receita.ingredientes}\n")
             file.write(f"{receita.preparo}\n")
+            file.write{f"{receita.nota}\n")
             file.write("\n")
 
 def adicionar_receita(lista_receitas):
@@ -86,10 +91,14 @@ def adicionar_receita(lista_receitas):
     pais = input("Digite o país de origem: ")
     ingredientes = input("Digite os ingredientes utilizados na receita: ")
     preparo = input("Digite o modo de preparo da receita: ")
-    nova_receita = Receita(nome, pais, ingredientes, preparo)
+    nota = input("Digite a nota que você dar para essa receita: ")
+    notas()
+    nova_receita = Receita(nome, pais, ingredientes, preparo, nota)
     lista_receitas.append(nova_receita)
     salvar_receitas([nova_receita])  # Salva apenas a nova receita em modo de append
     print("Nova receita adicionada")
+
+def notas()
 
 def visualizar_receitas(lista_receitas):
     clear_screen()
